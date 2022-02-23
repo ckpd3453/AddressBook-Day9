@@ -6,11 +6,13 @@ class AddBook
 	
 	void dataAdd()
 	{
-		 
+		 //Scanner function to take user input
 		try(Scanner scanner = new Scanner(System.in))
 		{
+			//ArrayList Function
 			ArrayList<String> contacts = new ArrayList<String>();
 			
+			//Inserting elements to array list
 			System.out.print("Enter First Name: ");
 			String fn =scanner.nextLine();
 			contacts.add(fn);
@@ -50,34 +52,36 @@ class AddBook
 			String email =scanner.nextLine();
 			contacts.add(email);
 			
+			//Displaying ArrayList
 			System.out.println("Contact Added");
 			System.out.println(contacts);
 			
-			System.out.println("Enter the first name of contact you want to edit :");
+			//Logic to delete the ArrayList
+			System.out.println("Enter the first name of contact you want to delete :");
 			String fn1= scanner.nextLine();
 			
 			
 			if (fn1 .equals(fn) )
 			{
-				dataAdd();
+				contacts.removeAll(contacts);
+				System.out.println(contacts +"Empty AddressBook");
 			}
 			else
 			{
 				System.out.println("NO contact exists by this name");
-			}
-
-			System.out.println("Edited Contacts: "+contacts);
-			
+			}			
 			
 		}
 	}
 }
 
-public class UC3 {
+public class UC4 {
 
 	public static void main(String[] args) {
 		System.out.println("PhoneBook");
+		//object creating
 		AddBook person1 = new AddBook();
+		//calling method
 		person1.dataAdd();
 	}
 
