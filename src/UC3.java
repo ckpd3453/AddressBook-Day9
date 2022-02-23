@@ -52,11 +52,21 @@ class AddBook
 			
 			System.out.println("Contact Added");
 			System.out.println(contacts);
+			
+			System.out.print("Enter the Edited FirstName: ");
+			String fn1 =scanner.nextLine();
+			String element = contacts.set(0, fn1);
+			System.out.print("Enter the Edited LastName: ");
+			String ln1 =scanner.nextLine();
+			String element1 = contacts.set(1, ln1);
+
+			System.out.println("Edited Contacts: "+contacts);
+			
 		}
 	}
 }
 
-public class UC2 {
+public class UC3 {
 
 	public static void main(String[] args) {
 		System.out.println("PhoneBook");
