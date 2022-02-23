@@ -53,14 +53,21 @@ class AddBook
 			System.out.println("Contact Added");
 			System.out.println(contacts);
 			
-			System.out.print("Enter the Edited FirstName: ");
-			String fn1 =scanner.nextLine();
-			String element = contacts.set(0, fn1);
-			System.out.print("Enter the Edited LastName: ");
-			String ln1 =scanner.nextLine();
-			String element1 = contacts.set(1, ln1);
+			System.out.println("Enter the first name of contact you want to edit :");
+			String fn1= scanner.nextLine();
+			
+			
+			if (fn1 .equals(fn) )
+			{
+				dataAdd();
+			}
+			else
+			{
+				System.out.println("NO contact exists by this name");
+			}
 
 			System.out.println("Edited Contacts: "+contacts);
+			
 			
 		}
 	}
